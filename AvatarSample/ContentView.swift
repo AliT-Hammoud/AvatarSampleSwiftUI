@@ -9,11 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     @State var people = Person.samples
+    @State var participants = Person.samples.filter {$0.isParticipant}
     
     var body: some View {
-        List(people){ person in
-            AvatarView(person: person)
+        List{
+            Section("Participants") {
+                ForEach(participants) { person in
+                    AvatarView(person: person)
+                        .avatarImageShape(.round)
+                }
+            }
+            Section("Speakers") {
+                ForEach(people) { person in
+                    AvatarView(person: person)
+                }
+            }
         }
+        .avatarImageShape(.rectangle)
     }
 }
 

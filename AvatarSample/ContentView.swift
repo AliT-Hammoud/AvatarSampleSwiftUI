@@ -9,31 +9,27 @@ import SwiftUI
 
 struct ContentView: View {
     @State var people = Person.samples
+    @State var participants = Person.samples.filter {$0.isParticipant}
     
     var body: some View {
-        List(people){ person in
-            HStack(alignment: .top){
-                Image(person.profileImageName)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 74, height: 75, alignment: .center)
-                    .clipShape(.circle)
-                    .accessibilityLabel(person.fullName)
-                VStack(alignment: .leading) {
-                    Text(person.fullName)
-                        .font(.headline)
-                    Text(person.jobtitle)
-                        .font(.subheadline)
-                    Text(person.affiliation)
-                        .font(.subheadline)
+        List{
+            Section("Participants") {
+                ForEach(participants) { person in
+                    AvatarView(person: person)
+                        .avatarImageShape(.round)
                 }
             }
-            .accessibilityElement(children: .contain)
-            .accessibilityLabel(person.fullName)
+            Section("Speakers") {
+                ForEach(people) { person in
+                    AvatarView(person: person)
+                }
+            }
         }
+        .avatarImageShape(.rectangle)
     }
 }
 
 #Preview {
     ContentView()
 }
+

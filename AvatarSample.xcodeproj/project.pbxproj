@@ -12,6 +12,7 @@
 		B100D10E2B2AF37B00FD5165 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B100D10D2B2AF37B00FD5165 /* Assets.xcassets */; };
 		B100D1112B2AF37B00FD5165 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B100D1102B2AF37B00FD5165 /* Preview Assets.xcassets */; };
 		B100D1182B2AF3F000FD5165 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100D1172B2AF3F000FD5165 /* Person.swift */; };
+		B100D11A2B2B1A9D00FD5165 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B100D1192B2B1A9D00FD5165 /* AvatarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		B100D10D2B2AF37B00FD5165 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B100D1102B2AF37B00FD5165 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B100D1172B2AF3F000FD5165 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		B100D1192B2B1A9D00FD5165 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				B100D1172B2AF3F000FD5165 /* Person.swift */,
 				B100D10D2B2AF37B00FD5165 /* Assets.xcassets */,
 				B100D10F2B2AF37B00FD5165 /* Preview Content */,
+				B100D1192B2B1A9D00FD5165 /* AvatarView.swift */,
 			);
 			path = AvatarSample;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B100D1182B2AF3F000FD5165 /* Person.swift in Sources */,
+				B100D11A2B2B1A9D00FD5165 /* AvatarView.swift in Sources */,
 				B100D10C2B2AF37A00FD5165 /* ContentView.swift in Sources */,
 				B100D10A2B2AF37A00FD5165 /* AvatarSampleApp.swift in Sources */,
 			);

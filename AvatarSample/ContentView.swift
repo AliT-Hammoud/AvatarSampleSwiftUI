@@ -12,24 +12,7 @@ struct ContentView: View {
     
     var body: some View {
         List(people){ person in
-            HStack(alignment: .top){
-                Image(person.profileImageName)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 74, height: 75, alignment: .center)
-                    .clipShape(.circle)
-                    .accessibilityLabel(person.fullName)
-                VStack(alignment: .leading) {
-                    Text(person.fullName)
-                        .font(.headline)
-                    Text(person.jobtitle)
-                        .font(.subheadline)
-                    Text(person.affiliation)
-                        .font(.subheadline)
-                }
-            }
-            .accessibilityElement(children: .contain)
-            .accessibilityLabel(person.fullName)
+            AvatarView(person: person)
         }
     }
 }
@@ -37,3 +20,4 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+
